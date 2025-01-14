@@ -25,8 +25,12 @@ def makeDOB():
     # Return the formatted date in the format mm/dd/yyyy
     return f"{mo:02}/{day:02}/{year}"
        
+def assignOccupation():
+    occupations = ["accounting" , "legal" , "human_resources"]
+    return random.choice(occupations)
 
 def main():
-    print(makeName(),makeDOB())
+    # name , dob , occupation
+    print(makeName().capitalize(),makeDOB(),assignOccupation())
 
 main()
